@@ -7,6 +7,7 @@
   margin-top: 110px;
   width: 1200px;
   padding-bottom: 150px;
+  z-index: -9;
   //////////////////////////Searched Movies Styles
   // .found_movies_cont {
   //   min-width: 300px;
@@ -71,7 +72,7 @@
       .slick-slide,
       .list_movie {
         // width: 249px;
-        height: 270px;
+        height: 250px;
         overflow: hidden;
         border-radius: 3px;
         z-index: 1;
@@ -172,6 +173,14 @@
 @media only screen and (max-width: 800px) {
   .movie_lists {
     width: 650px;
+    .list_container {
+      .list_carousel {
+        .slick-slide,
+        .list_movie {
+          height: 290px;
+        }
+      }
+    }
   }
 }
 

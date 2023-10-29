@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
   z-index: -1;
-  overflow: hidden;
 }
 .hero .hero_content {
   position: relative;
@@ -92,14 +91,7 @@
   justify-content: center;
   flex-direction: column;
   left: 0;
-  bottom: 70px;
-}
-.hero .hero_content .hero_movies_carousel .hero_search .hero_cont {
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  bottom: -210px;
 }
 .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
   padding: 7px;
@@ -117,12 +109,38 @@
   margin-left: 10px;
 }
 .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list {
-  position: absolute;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  width: fit-content;
   top: 30px;
   align-self: center;
 }
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list .searched_movie img {
+  width: 140px;
+  transition: transform 0.6s ease;
+}
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list .searched_movie img:hover {
+  transform: scale(1.05);
+  object-position: center;
+  max-width: 100%;
+}
 
 @media only screen and (min-width: 1400px) {
+  .hero {
+    width: 100%;
+    height: 600px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+}
+@media only screen and (max-width: 1400px) {
   .hero_movies_item {
     z-index: 1;
     width: 100%;
@@ -174,6 +192,28 @@
   .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
     font-size: 3vw;
   }
+  .hero .hero_content .hero_movies_carousel .hero_search {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 0;
+    bottom: -110px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
+    margin-bottom: 0;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list .searched_movie img {
+    width: 140px;
+    transition: transform 0.6s ease;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list .searched_movie img:hover {
+    transform: scale(1.05);
+    object-position: center;
+    max-width: 100%;
+  }
 }
 @media only screen and (max-width: 900px) {
   .hero .carousel_container {
@@ -211,9 +251,6 @@
     font-size: 3vw;
     bottom: 230px;
   }
-  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
-    margin-bottom: 50px;
-  }
   .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
     width: 500px;
   }
@@ -236,7 +273,9 @@
     height: 100%;
   }
   .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
-    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
     width: 400px;
@@ -261,9 +300,6 @@
   }
 }
 @media only screen and (max-width: 500px) {
-  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
-    margin-bottom: 80px;
-  }
   .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
     width: 300px;
   }
