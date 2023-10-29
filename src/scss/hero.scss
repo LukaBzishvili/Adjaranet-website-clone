@@ -1,3 +1,8 @@
+//Search List class
+// .opacity_to_one {
+//   opacity: 1;
+// }
+
 //Hero
 .hero {
   width: 100%;
@@ -7,7 +12,6 @@
   align-items: center;
   justify-content: center;
   z-index: -1;
-  // overflow: hidden;
 
   //   .hero_top_div {
   .hero_content {
@@ -106,7 +110,7 @@
         justify-content: center;
         flex-direction: column;
         left: 0;
-        bottom: -210px;
+        top: 500px;
         .hero_cont {
           .search {
             input {
@@ -127,6 +131,8 @@
           }
 
           .searched_list {
+            opacity: 0;
+            // transition: opacity 0.5s ease-in-out 0.5s;
             background-color: white;
             padding: 10px 20px;
             border-radius: 10px;
@@ -138,7 +144,7 @@
             align-self: center;
 
             .searched_movie {
-              img{
+              img {
                 width: 140px;
                 transition: transform 0.6s ease;
                 &:hover {
@@ -156,12 +162,7 @@
   //   }
 }
 
-
-
-
-
-
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1400px) {
   .hero {
     width: 100%;
     height: 600px;
@@ -170,52 +171,49 @@
     align-items: center;
     justify-content: center;
     z-index: 0;
-  
+
     //   .hero_top_div {
-  //   .hero_content {
-  //     .hero_movies_carousel {
-  //       .hero_prev {
-  //         img {
-  //           width: 70px;
-  //         }
-  //       }
-  //       .hero_next {
-  //         img {
-  //           width: 70px;
-  //         }
-  //       }
-  //       .carousel_container {
-  //         .single-item {
-  //           .hero_movies_item {
-  //             // .slick-slide {
-  //             img {
-  //             }
-  //             h3 {
-  //             }
-  //             h2 {
-  //             }
-  //           }
-  //         }
-  //       } 
-  //         .hero_search {
-  //           .hero_cont {
-  //             .search {
-  //               input {
-  //               }
-  //               label {
-  //               }
-  //             }
-  //             .searched_list {
-  //             }
-  //         }
-  //       }
-  //     }
-  //   }
+    //   .hero_content {
+    //     .hero_movies_carousel {
+    //       .hero_prev {
+    //         img {
+    //           width: 70px;
+    //         }
+    //       }
+    //       .hero_next {
+    //         img {
+    //           width: 70px;
+    //         }
+    //       }
+    //       .carousel_container {
+    //         .single-item {
+    //           .hero_movies_item {
+    //             // .slick-slide {
+    //             img {
+    //             }
+    //             h3 {
+    //             }
+    //             h2 {
+    //             }
+    //           }
+    //         }
+    //       }
+    //         .hero_search {
+    //           .hero_cont {
+    //             .search {
+    //               input {
+    //               }
+    //               label {
+    //               }
+    //             }
+    //             .searched_list {
+    //             }
+    //         }
+    //       }
+    //     }
+    //   }
   }
 }
-
-
-
 
 @media only screen and (max-width: 1400px) {
   .hero_movies_item {
@@ -241,8 +239,6 @@
       font-size: 20px;
     }
   }
-
-  
 }
 
 @media only screen and (max-width: 1100px) {
@@ -291,12 +287,16 @@
         h2 {
           font-size: 3vw;
         }
+
+        img {
+          height: 500px;
+        }
       }
 
       .hero_search {
         width: 100%;
         position: absolute;
-        display: flex;
+        // display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -306,17 +306,14 @@
           .search {
             margin-bottom: 0;
             input {
-            
             }
             label {
             }
           }
 
           .searched_list {
-           
-
             .searched_movie {
-              img{
+              img {
                 width: 140px;
                 transition: transform 0.6s ease;
                 &:hover {
@@ -348,6 +345,7 @@
           width: 100%;
           height: 100%;
           // img {
+          // }
           // }
         }
       }
@@ -381,6 +379,9 @@
         h2 {
           font-size: 3vw;
           bottom: 230px;
+        }
+        img {
+          height: 400px;
         }
       }
     }

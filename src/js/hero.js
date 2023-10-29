@@ -1,18 +1,29 @@
 const singleItem = document.querySelector(".single-item");
 const heroSearchInput = document.querySelector(".hero_search_input");
+const searchedList = document.querySelector(".searched_list");
+
+//Searched List Logic
+
 let searchValue;
 heroSearchInput.addEventListener("keyup", () => {
   searchValue = heroSearchInput.value.toLowerCase();
-  console.log(searchValue);
-  moviesArr.forEach((element) => {
-    if (element[0].toLowerCase().includes(searchValue)) {
-      console.log("First element contains searchValue");
-      // console.log(searchValue);
-      //////////////////////////////////////////////////////////////////////
-    } else {
-      // console.log("First element does not contain searchValue");
-    }
-  });
+
+  searchedList.innerHTML = "";
+  if (searchValue.length <= 3) {
+    searchedList.style.opacity = "0";
+    // searchedList.classList.remove("opacity_to_one");
+    searchedList.innerHTML = "";
+  } else if (searchValue.length > 3) {
+    moviesArr.forEach((element) => {
+      if (element[1].toLowerCase().includes(searchValue)) {
+        searchedList.innerHTML += `<div class="searched_movie">
+        <img src="${element[8]}" alt="searched movie">
+        </div>`;
+        searchedList.style.opacity = "1";
+        // searchedList.classList.add("opacity_to_one");
+      }
+    });
+  }
 });
 
 $(document).ready(function () {

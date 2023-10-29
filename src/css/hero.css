@@ -91,7 +91,7 @@
   justify-content: center;
   flex-direction: column;
   left: 0;
-  bottom: -210px;
+  top: 500px;
 }
 .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
   padding: 7px;
@@ -109,6 +109,7 @@
   margin-left: 10px;
 }
 .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list {
+  opacity: 0;
   background-color: white;
   padding: 10px 20px;
   border-radius: 10px;
@@ -192,10 +193,12 @@
   .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
     font-size: 3vw;
   }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item img {
+    height: 500px;
+  }
   .hero .hero_content .hero_movies_carousel .hero_search {
     width: 100%;
     position: absolute;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -250,6 +253,9 @@
   .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
     font-size: 3vw;
     bottom: 230px;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item img {
+    height: 400px;
   }
   .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
     width: 500px;
