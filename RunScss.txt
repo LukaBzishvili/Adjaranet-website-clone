@@ -1,0 +1,14 @@
+Main: 
+npx sass --watch ./src/scss/main.scss:./src/css/main.css
+
+Hero: 
+npx sass --watch ./src/scss/hero.scss:./src/css/hero.css
+
+Movie's List:
+npx sass --watch ./src/scss/MovieList.scss:./src/css/MovieList.css
+
+Footer:
+npx sass --watch ./src/scss/footer.scss:./src/css/footer.css
+
+
+filling svg's: stroke:

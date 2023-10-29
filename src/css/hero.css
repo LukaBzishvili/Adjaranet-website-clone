@@ -1,0 +1,272 @@
+.hero {
+  width: 100%;
+  height: 500px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  overflow: hidden;
+}
+.hero .hero_content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero_content .hero_movies_carousel {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero .hero_content .hero_movies_carousel .hero_prev {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  width: 60px;
+  height: 300px;
+  top: 100px;
+  left: 70px;
+  z-index: 999;
+  cursor: pointer;
+}
+.hero .hero_content .hero_movies_carousel .hero_prev img {
+  width: 70px;
+}
+.hero .hero_content .hero_movies_carousel .hero_next {
+  position: absolute;
+  width: 60px;
+  background-color: transparent;
+  border: none;
+  height: 300px;
+  top: 100px;
+  right: 70px;
+  z-index: 999;
+  cursor: pointer;
+}
+.hero .hero_content .hero_movies_carousel .hero_next img {
+  width: 70px;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container {
+  width: 100%;
+  display: flex;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container .single-item {
+  width: 100%;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item img {
+  display: block;
+  width: 100%;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h3 {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  bottom: 150px;
+  text-align: center;
+  z-index: 999;
+}
+.hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  bottom: 190px;
+  text-align: center;
+  z-index: 999;
+}
+.hero .hero_content .hero_movies_carousel .hero_search {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 0;
+  bottom: 70px;
+}
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
+  padding: 7px;
+  width: 708px;
+  height: 18px;
+  background-color: rgb(187, 187, 187);
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid var(--color-blue-darker);
+  text-align: center;
+  padding: 5px;
+  font-size: 19px;
+}
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search label {
+  margin-left: 10px;
+}
+.hero .hero_content .hero_movies_carousel .hero_search .hero_cont .searched_list {
+  position: absolute;
+  top: 30px;
+  align-self: center;
+}
+
+@media only screen and (min-width: 1400px) {
+  .hero_movies_item {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 500px;
+  }
+  .hero_movies_item img {
+    margin: -320px auto;
+    display: block;
+    width: 100%;
+  }
+  .hero_movies_item h3 {
+    font-size: 25px;
+  }
+  .hero_movies_item h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .hero_movies_item {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+  }
+  .hero_movies_item h3 {
+    font-size: 20px;
+  }
+  .hero_movies_item h2 {
+    font-size: 15px;
+  }
+  .hero {
+    height: 450px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_prev {
+    top: 170px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_next {
+    top: 170px;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h3 {
+    font-size: 3vw;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hero .carousel_container {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .carousel_container .single-item {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .carousel_container .single-item .hero_movies_item {
+    width: 100%;
+    height: 100%;
+  }
+  .hero {
+    height: 360px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_prev {
+    top: 170px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_prev img {
+    width: 50px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_next {
+    top: 170px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_next img {
+    width: 50px;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h3 {
+    font-size: 3vw;
+    bottom: 200px;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
+    font-size: 3vw;
+    bottom: 230px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
+    margin-bottom: 50px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hero .carousel_container {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .carousel_container .single-item {
+    width: 100%;
+    height: 100%;
+  }
+  .hero .carousel_container .single-item .hero_movies_item {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+  }
+  .hero .carousel_container .single-item .hero_movies_item img {
+    height: 100%;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
+    margin-bottom: 50px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
+    width: 400px;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h2 {
+    font-size: 4vw;
+  }
+  .hero .hero_content .hero_movies_carousel .carousel_container .single-item .hero_movies_item h3 {
+    font-size: 4vw;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_next {
+    right: 30px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_prev {
+    left: 30px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_prev img {
+    width: 30px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_next img {
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search {
+    margin-bottom: 80px;
+  }
+  .hero .hero_content .hero_movies_carousel .hero_search .hero_cont .search input {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */
